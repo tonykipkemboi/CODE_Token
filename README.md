@@ -2,6 +2,8 @@
 
 This is a simple project to track [Developer DAO](https://www.developerdao.com/) $CODE token [Airdrop](https://claim.developerdao.com/).
 
+![Terminal Output](./image/terminal.png)
+
 The project uses [Alchemy's](https://docs.alchemy.com/reference/alchemy-getassettransfers) `alchemy_getAssetTransfers` method to get data related to $CODE mint acitivity.
 
 ## Installation Steps
