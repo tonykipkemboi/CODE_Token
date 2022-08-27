@@ -192,8 +192,8 @@ def get_stats(df: pd.DataFrame) -> pd.DataFrame:
     # count owners of $CODE by value
     category = df['value'].value_counts()
 
-    # rename index to 'CODE'
-    df_percent.index.names = ['CODE']
+    # rename index to 'code_amount'
+    df_percent.index.names = ['code_amount']
 
     # add owners to df
     df_percent['owners'] = category
@@ -203,8 +203,8 @@ def get_stats(df: pd.DataFrame) -> pd.DataFrame:
     df_percent['index'] = range(1, len(df_percent) + 1)
     df_percent = df_percent.reset_index()
     df_percent = df_percent.set_index('index')
-    df_percent['CODE'] = df_percent['CODE'].apply(np.floor)
-    df_percent['percentage'] = df_percent['percentage'].apply(np.floor)
+    # df_percent['CODE'] = df_percent['code_amount'].apply(np.floor)
+    # df_percent['percentage'] = df_percent['percentage'].apply(np.floor)
 
     return df_percent
 
